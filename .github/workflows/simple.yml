@@ -17,7 +17,7 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-  run-windows.commands:
+  run-windows-commands:
     runs-on: windows-latest
     steps:
       - name: Directory PowerShell
@@ -25,4 +25,3 @@ jobs:
       - name: Directory Bash
         run: pwd
         shell: bash
-        
