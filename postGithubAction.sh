@@ -6,7 +6,7 @@ curl \
   -H "Accept: application/vnd.github.v3+json" \
   -u "chopan123:$GITHUB_PAT" \
   https://api.github.com/repos/chopan123/githubActions/dispatches \
-  -d '{"event_type":"build","client_payload":{"unit":false,"integration":true}}'
+  -d '{"event_type":"build","client_payload":{"env":"production","unit":false,"integration":true}}'
 
   # curl \
   #   -X POST \
