@@ -7,6 +7,13 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         node_version: [6, 8, 10]
+        include:
+          - os: ubuntu-latest
+            node_version: 8
+            is_ubuntu_8: "true" # This variable will exist only when os is ubuntu latest and node is 8
+        exclude:
+          - os: ubuntu-latest
+            node_version: 6
     runs-on: ${{matrix.os}}
     steps:
       - name: Log node version

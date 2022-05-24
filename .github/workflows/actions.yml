@@ -1,25 +1,25 @@
 name: Actions Workflow
 
 on:
-  push:
-    # branches-ignore: # run on all branches but these ones
-    branches:
-      - main
-      - 'feature/*' # matches feature/featA, but it doesn't match feature/featA/a
-      - 'feature/**' # matches anystring
-      - '!feature/featC' # ignores branch when using !
-    # tags-ignore:
-    tags:
-      - v1.*
-    # paths:
-    #   - '**.js' # it will run whenever a javascript file is pushed
-    paths-ignore:
-      - 'docs/**' # it won't run if push only modifies docs 
-  # repository_dispatch:
-  #   types: [build]
-  # schedule:
-  #   - cron: "0/5 * * * *"
   # push:
+  #   # branches-ignore: # run on all branches but these ones
+  #   branches:
+  #     - main
+  #     - 'feature/*' # matches feature/featA, but it doesn't match feature/featA/a
+  #     - 'feature/**' # matches anystring
+  #     - '!feature/featC' # ignores branch when using !
+  #   # tags-ignore:
+  #   tags:
+  #     - v1.*
+  #   # paths:
+  #   #   - '**.js' # it will run whenever a javascript file is pushed
+  #   paths-ignore:
+  #     - 'docs/**' # it won't run if push only modifies docs
+  # # repository_dispatch:
+  # #   types: [build]
+  # # schedule:
+  # #   - cron: "0/5 * * * *"
+  # # push:
   pull_request:
     types: [closed, assigned, opened, reopened]
 
